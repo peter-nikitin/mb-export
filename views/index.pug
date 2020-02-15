@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/export/" method="post")
+    label Экндпоинт
+    br
+    input(type="text" name='endpoint' )
+    br
+    label Секретный ключ
+    br
+    input(type="password", name="secretKey")
+    br
+
+    label Операция экспорта
+    br
+    input(type="text" name='oparation')
+    br
+    button(type="submit") экспортировать
